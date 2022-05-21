@@ -1,0 +1,290 @@
+
+ /*General design*/
+body{
+  background-color: blanchedalmond;
+  place-items: center;
+  display: grid;
+  margin: 0;
+  height: 100vh;
+  color:darkmagenta;
+  text-align: right;
+  font-family: 'Heebo';
+ }
+
+
+ /*Options for buying Design*/
+.typesBuy{
+  color:blueviolet;
+  background-color: beige;
+  border: 1px solid lightcoral;
+   }
+   @font-face {
+      font-family: 'Heebo';
+      src: url(Heebo-VariableFont_wght.ttf);
+  }
+
+   /*boxes including img Design*/
+
+.boxes{
+  background-color: rgb(228, 160, 255);
+  width: 200px;
+  border: 20px solid rgb(206, 61, 185) ;
+  padding: 10px;
+  width: 85%; 
+  height: 80%;
+  left: 30px;
+
+
+}
+
+img {
+  width: 400px;
+  height: auto;
+}
+
+.container img {
+  max-height: 20%;
+  max-width: 20%;
+}
+
+
+ /*Header*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to right, #aa076b, #61045f);
+  padding: 10 10px;
+}
+
+header h1 {
+  color: white;
+  line-height: 80px;
+  margin: 0;
+  text-shadow: 2px 2px black;
+}
+
+header img {
+  height: 88px;
+  float: left;
+}
+
+ /*Nav for the menu Bar*/
+
+nav {
+  position: fixed;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  background-color: #61045f;
+  text-align: center;
+  border-right:solid 1px  #d8e6e4 ;
+  border-top: solid 1px  #d8e6e4 ;
+  border-left:solid 1px  #d8e6e4 ;
+  border-bottom: solid 1px  #d8e6e4 ;
+}
+
+nav a {
+  display: block;
+  padding: 20px 0;
+  border-right:solid 1px  #d8e6e4 ;
+  border-top: solid 1px  #d8e6e4 ;
+  border-left:solid 1px  #d8e6e4 ;
+  border-bottom: solid 1px  #d8e6e4 ;
+  color: white;
+  font-size: 150%;
+  text-decoration: none;
+
+}
+nav a.currentpage{
+  background-color: rgb(228, 160, 255);
+  border-right:solid 1px  #d8e6e4 ;
+  border-top: solid 1px  #d8e6e4 ;
+  border-left:solid 1px  #d8e6e4 ;
+  border-bottom: solid 1px  #d8e6e4 ;
+}
+article{
+  padding: 20px 20px;
+  
+}
+
+
+ li {float: right; clear: right; list-style-type: circle
+ }​
+
+ div {
+     border: 2px solid black;
+     margin: 20px;
+     padding: 20px;
+ }
+
+ #container {
+     display: grid;
+     grid-template-areas: 
+     'Secondaries titles';
+ }
+ 
+  /*relevant sizes for music - 
+  Optianal adding more items in these size in the menu bar*/
+
+ .Secondaries {
+     grid-area: Secondaries;
+     height: 30px;
+     margin: 50px;
+     width: 200px;
+ }
+
+
+/* titles design*/
+
+ .titles {
+  grid-area: titles;
+  height: 5vh;
+  color: darkgrey;
+  white-space: nowrap;
+  transform: translate(-5%, -5%);
+  font-size: 2.2em;
+  letter-spacing: 0.1em;
+  transition: 0.3s;
+  text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
+    1px 5px 0 grey, 1px 6px 0 grey, 1px 4px 0 grey, 1px 1px 0 grey,
+    5px 13px 15px black;
+}
+
+.titles:hover {
+  transition: 0.3s;
+  transform: scale(1.1)translate(-5%, -5%);
+  text-shadow: 1px -1px 0 grey, 1px -2px 0 grey, 1px -3px 0 grey,
+    1px -4px 0 grey, 1px -5px 0 grey, 1px -6px 0 grey, 1px -7px 0 grey,
+    1px -8px 0 grey, 5px -13px 15px black, 5px -13px 25px #808080;
+}
+
+
+@media only screen and (max-width: 600px) {
+  body {background-color: blanchedalmond;}
+  #container {
+      display: grid;
+      grid-template-areas: 'titles'
+      'Secondaries';
+  }
+  
+}
+
+
+
+/* Button design */
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: 'Heebo';
+
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+
+
+/* paragraph design*/
+
+
+p {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  font-size: 1.1rem;
+  background: linear-gradient(to bottom, #000, #000 60%, rgb(65, 22, 52) 60%, #fff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-repeat: no-repeat;
+  transition:  0.2s ease-out;
+  white-space: nowrap;
+  text-align: center;
+}
+
+span {
+  position: relative;
+}
+
+span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #000;
+  bottom: 9px;
+  transition: all 0.2s ease-out;
+}
+
+p:hover {
+  background-position: 0 11px;
+}
+
+span:hover:before {
+  transform: translateY(10px)
+}
+
+
+

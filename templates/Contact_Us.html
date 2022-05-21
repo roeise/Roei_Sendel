@@ -1,64 +1,104 @@
 <!doctype html>
 <html>
 <header>
-    <h1>צור קשר</h1>
-</header>
-<body>
 
-<div>
-  <p>
-        <form action="" style=" background-color: lightgrey;
-                                width: 320px;
-                                border: 15px solid rgb(235, 233, 124);
-                                padding: 55px;
-                                margin: 52px;">
-<form action="URL">
-    <lable for="CustomerName">שם מלא </lable>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="..\static\global.css">
+    <title>Contact_Us</title>
+    <script src="javaScriptBlin.js"></script>
+
+    <!-- Container for the menu bar-->
+    <div id="container">
+      <h1 class="titles"> לבקשות ישירות </h1> 
+      <audio class="Secondaries" controls>
+          <source src="..\static\Ukulele_song.mp3" type="audio/mp3">
+          audio.volume = 0.2;
+      </audio> 
+    </div>
+
+    <nav id="sidenav">
+      <a href="./Home.html" >דף הבית</a>
+      <a href="./Contact_Us.html" id="home" class="currentpage">צור קשר</a>
+  </nav>
+ 
+</header>
+
+  <br>  <br>  <br>   <br> <br>    <br>    <br>   <br>    <br> <br>   <br>    
+
+
+<body>
+  
+      <!-- Filling an order for Take Away-->
+  <div>
+<form class="boxes" action="" ><!-- In the future we can add a real path for the-->
+  <br>
     <input type="text" id="CustomerName">
+    <lable for="CustomerName">שם מלא </lable>
     <br><br>
-    <lable for ="orderDate">תאריך הזמנה</lable>
     <input type="date" id="orderDate">
+    <lable for ="orderDate">תאריך הזמנה</lable>
     <br><br>
+    <input type="email" id="emailUser" maxlength="20">
     <lable for ="emailUser">E-MAIL</lable>
-    <input type="email" id="emailUser" maxlength="10">
     <br><br>
-    <lable for ="BlinchessCheese">בלינצ'ס במילוי גבינה</lable>
-    <input type="checkbox" id=BlinchessCheese>
-    <lable for ="BlinchessNugat">בלינצ'ס במילוי נוגט וקפה</lable>
-    <input type="checkbox" id1=BlinchessNugat>
+    <input type="tel" id="Phone">
+    <lable for ="Phone">נייד</lable>
+
+    <br>
+
+    <h3 >...אני מעוניין ב </h2> 
+
+
+    <lable for ="BlinchessCheese">(30₪) בלינצ'ס במילוי צימוקים וגבינת שמנת</lable>
+    <input name="product" value="30" type="checkbox" onclick="totalIt()" type="checkbox" id=BlinchessCheese>
+    <br>
+    <lable for ="BlinchessNugat">(35₪) בלינצ'ס במילוי נוגט וקפה</lable>
+    <input name="product" value="35" type="checkbox" onclick="totalIt()" id1=BlinchessNugat>
+    <br>
+
+    <lable for ="BlinchessNugat">(35₪)בלינצ'ס במילוי נוגט וקפה</lable>
+    <input name="product" value="35" type="checkbox" onclick="totalIt()" id1=BlinchessNugat>
+    <br>
+
+
+    <h3 >:מחיר משוער </h2> 
+    <input value="₪0.00" readonly="readonly" type="text" name="total" />
+
     <br><br>
-    <label for="file">העלאת קופון</label>
+    
+    <label for="file" >העלאת קופון</label>
     <input type="file" id="file" name="file">
     <br><br>
-    <br><br>
-    <input type="reset">
-    <input type="submit" value="הזמן">
 
+    <button type="submit" class="btn btn-primary">הזמן</button>
+    <input type="reset">
     <br><br>
 
 </form>
 </div>
-<div style="background-color:rgb(199, 208, 156); padding: 25px;margin: 35px"> כתובת לאיסוף: באר שבע, הדעת 6</div> 
-<audio controls>
-    <source src="..\static\jazz_Song.mp3" type="audio/mp3">
-    background-color: lightgrey;
-                                                                width: 300px;
-                                                                border: 15px solid rgb(193, 146, 237);
-                                                                padding: 50px;
-                                                                margin: 50px;"></audio>
-  </audio>
-  <br><br><br><br>
-    <span style="background-color:  rgb(235, 233, 124); padding: 20px;margin: 20px;border: 2px solid gray">באר שבע</span> 
-    <span style="background-color:  rgb(235, 233, 124); padding: 20px;margin: 20px;border: 2px solid gray">קרית גת</span> 
-    <span style="background-color:  rgb(235, 233, 124); padding: 20px;margin: 20px;border: 2px solid gray">עומר</span> 
-    <br><br> <br><br>
-    <footer>
-        <p><a href="blinchessCheese@gmail.com">blinchessCheese@gmail.com</a></p>
-    </footer>
-</head>
 
-<ul>
-  <li><a href="file:///D:/OneDrive/%D7%9E%D7%A1%D7%9E%D7%9B%D7%99%D7%9D/WEBProjects/Excercise1/Roei_Sendel/templates/Home_Page.html">Home Page</a></li>
-</ul>
+
+
+<br>
+<div> : סניפים  </div> 
+
+  <span><p>קרית גת</p></span>
+  <span><p>באר שבע</p></span>
+  <span><p>עומר</p></span>
+   
+  <br>
+
+  
+  <div> : מייל למענה  </div> 
+      <!-- send a message-->
+    <footer>
+        <p><a href="https://mail.google.com/mail/u/0/#inbox">blinchessCheese@gmail.com</a></p>
+      </footer>
+
+
+
 </body>
+
+
 
